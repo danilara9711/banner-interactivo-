@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Banner Interactivo</title>
+    <!-- Carga la tipografía usada en el banner original -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
+    <!-- Enlaza la hoja de estilos -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script>
+        // Evita que se muestre el menú contextual sobre el logotipo
+        document.addEventListener("DOMContentLoaded", function () {
+            var logo = document.getElementById("logo");
+            if (logo) {
+                logo.addEventListener("contextmenu", function (event) {
+                    event.preventDefault();
+                });
+            }
+        });
+    </script>
+    <!-- Contenedor principal del banner -->
+    <div class="full-banner">
+        <!-- Espacios vacíos a los lados del banner -->
+        <div class="deadzone"></div>
+        <!-- Área interactiva que contiene el texto, las playlists y las animaciones -->
+        <div id="alt" class="interactive-area">
+            <!-- Texto promocional -->
+            <div class="promo-text2">
+                <p>ELIGE UNA PLAYLIST!</p>
+            </div>
+            <!-- Cuatro opciones de playlist -->
+            <div class="showcase2">
+                <div class="options">
+                    <a href="https://open.spotify.com/playlist/1hUdaJY8vZqiU7UfkbuxbH" target="_blank">
+                        <img src="https://raw.githubusercontent.com/marcobosglez/banner-interactivo/main/src/charlesnacion.png" alt="Playlist Charles Nacion">
+                    </a>
+                </div>
+                <div class="options">
+                    <a href="https://open.spotify.com/playlist/6QWFhBfV3F5afrDMz6Sn0q" target="_blank">
+                        <img src="https://raw.githubusercontent.com/marcobosglez/banner-interactivo/main/src/elbarrio.png" alt="Playlist El Barrio">
+                    </a>
+                </div>
+                <div class="options">
+                    <a href="https://open.spotify.com/playlist/4fV4LQwjUua5t7pTYBChEi" target="_blank">
+                        <img src="https://raw.githubusercontent.com/marcobosglez/banner-interactivo/main/src/hiphopmexicano.png" alt="Playlist Hip Hop Mexicano">
+                    </a>
+                </div>
+                <div class="options">
+                    <a href="https://open.spotify.com/playlist/5KMe8U2oBsZiUmfTEvmG4t" target="_blank">
+                        <img src="https://raw.githubusercontent.com/marcobosglez/banner-interactivo/main/src/rapmexicano.png" alt="Playlist Rap Mexicano">
+                    </a>
+                </div>
+            </div>
+            <!-- Capa que contiene la animación de estrellas -->
+            <div class="bg-animation">
+                <div id="stars"></div>
+                <div id="stars2"></div>
+                <div id="stars3"></div>
+                <div id="stars4"></div>
+            </div>
+            <!-- Logotipo en la esquina inferior izquierda -->
+            <img src="https://raw.githubusercontent.com/marcobosglez/banner-interactivo/main/src/ONE_rpm_studios.png" alt="logo" id="logo">
+            <!-- Superposición para efectos adicionales si se necesitan -->
+            <div class="overlay2"></div>
+        </div>
+        <!-- Segunda zona muerta para equilibrar el banner -->
+        <div class="deadzone"></div>
+    </div>
+</body>
+</html>
