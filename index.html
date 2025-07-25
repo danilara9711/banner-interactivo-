@@ -1,70 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
-
-        <title>Animated Spotify Banner</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                document.getElementById("logo").addEventListener("contextmenu", function (event) {
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Banner Interactivo</title>
+    <!-- Carga la tipografía usada en el banner original -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
+    <!-- Enlaza la hoja de estilos -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script>
+        // Evita que se muestre el menú contextual sobre el logotipo
+        document.addEventListener("DOMContentLoaded", function () {
+            var logo = document.getElementById("logo");
+            if (logo) {
+                logo.addEventListener("contextmenu", function (event) {
                     event.preventDefault();
                 });
-            });
-        </script>
-
-        <!-- General Content -->
-        <div class="full-banner">
-            <div class="deadzone"></div>
-            <div id="alt" class="interactive-area">
-            
-                <div class="promo-text2">
-                    <p>ELIGE UNA PLAYLIST!</p>
-                </div>
-                
-                <div class="showcase2">
-                        <div class="options">
-                            <a href="https://open.spotify.com/playlist/33ftesqepWGr2zOQSCzJBV">
-                                <img src="./src/VACILE Cristiano.png" alt="">
-                            </a>
-                        </div>
-                        <div class="options">
-                            <a href="https://open.spotify.com/playlist/52lKseSWkUwOFYEKpigdeh">
-                                <img src="./src/eAlabanza y Adoración.png" alt="">
-                            </a>
-                        </div>
-                        <div class="options">
-                            <a href="https://https://open.spotify.com/playlist/1VuRAdNdqJyHAqn3Fwnsic">
-                                <img src="./src/Vibra Tropical.png" alt="">
-                            </a>
-                        </div>
-                        <div class="options">
-                            <a href="https://open.spotify.com/playlist/53e1gW5hfUc4kiFKijRr96">
-                                <img src="./src/Exitos Católicos.png" alt="">
-                            </a>
-                        </div>
-                </div>
-    
-                <div class="bg-animation">
-                    <div id='stars'></div>
-                    <div id='stars2'></div>
-                    <div id='stars3'></div>
-                    <div id='stars4'></div>
-                </div>
-    
-                <img src="./src/logo.png" alt="logo" id="logo">
-                <div class="overlay2"></div>
+            }
+        });
+    </script>
+    <!-- Contenedor principal del banner -->
+    <div class="full-banner">
+        <!-- Espacios vacíos a los lados del banner -->
+        <div class="deadzone"></div>
+        <!-- Área interactiva que contiene el texto, las playlists y las animaciones -->
+        <div id="alt" class="interactive-area">
+            <!-- Texto promocional -->
+            <div class="promo-text2">
+                <p>ELIGE UNA PLAYLIST!</p>
             </div>
-            <div class="deadzone"></div>
+            <!-- Cuatro opciones de playlist -->
+            <div class="showcase2">
+                <div class="options">
+                    <a href="https://open.spotify.com/playlist/33ftesqepWGr2zOQSCzJBV" target="_blank">
+                        <img src="VACILE Cristiano.png" alt="Playlist Vacile Cristiano">
+                    </a>
+                </div>
+                <div class="options">
+                    <a href="https://open.spotify.com/playlist/52lKseSWkUwOFYEKpigdeh" target="_blank">
+                        <img src="https://Alabanza y Adoración.png" alt="Playlist Alabanza y Adoración">
+                    </a>
+                </div>
+                <div class="options">
+                    <a href="https://open.spotify.com/playlist/1VuRAdNdqJyHAqn3Fwnsic" target="_blank">
+                        <img src="Tropical Cristiano.png" alt="Playlist Tropical Cristiano">
+                    </a>
+                </div>
+                <div class="options">
+                    <a href="https://open.spotify.com/playlist/53e1gW5hfUc4kiFKijRr96" target="_blank">
+                        <img src="Exitos Católicos.png" alt="Playlist Exitos Católicos">
+                    </a>
+                </div>
+            </div>
+            <!-- Capa que contiene la animación de estrellas -->
+            <div class="bg-animation">
+                <div id="stars"></div>
+                <div id="stars2"></div>
+                <div id="stars3"></div>
+                <div id="stars4"></div>
+            </div>
+            <!-- Logotipo en la esquina inferior izquierda -->
+            <img src="https://logo.png" alt="logo" id="logo">
+            <!-- Superposición para efectos adicionales si se necesitan -->
+            <div class="overlay2"></div>
         </div>
-
-    </body>
+        <!-- Segunda zona muerta para equilibrar el banner -->
+        <div class="deadzone"></div>
+    </div>
+</body>
 </html>
