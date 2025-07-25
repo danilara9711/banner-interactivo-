@@ -1,19 +1,70 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Banner Interactivo</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="banner">
-    <h1>ELIGE UNA PLAYLIST!</h1>
-    <a href=https://open.spotify.com/playlist/33ftesqepWGr2zOQSCzJBV>VACILE Cristiano </a>
-    <a href=https://open.spotify.com/playlist/52lKseSWkUwOFYEKpigdeh>Alabanza y Adoración </a>
-    <a href=https://open.spotify.com/playlist/1VuRAdNdqJyHAqn3Fwnsic>Tropical Cristiano</a>
-    <a href=https://open.spotify.com/playlist/53e1gW5hfUc4kiFKijRr96>Exitos Católicos</a>
-    <img src="logo.png" alt="logo">
-  </div>
-</body>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
+
+        <title>Animated Spotify Banner</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                document.getElementById("logo").addEventListener("contextmenu", function (event) {
+                    event.preventDefault();
+                });
+            });
+        </script>
+
+        <!-- General Content -->
+        <div class="full-banner">
+            <div class="deadzone"></div>
+            <div id="alt" class="interactive-area">
+            
+                <div class="promo-text2">
+                    <p>ELIGE UNA PLAYLIST!</p>
+                </div>
+                
+                <div class="showcase2">
+                        <div class="options">
+                            <a href="https://open.spotify.com/playlist/33ftesqepWGr2zOQSCzJBV">
+                                <img src="./src/VACILE Cristiano.png" alt="">
+                            </a>
+                        </div>
+                        <div class="options">
+                            <a href="https://open.spotify.com/playlist/52lKseSWkUwOFYEKpigdeh">
+                                <img src="./src/eAlabanza y Adoración.png" alt="">
+                            </a>
+                        </div>
+                        <div class="options">
+                            <a href="https://https://open.spotify.com/playlist/1VuRAdNdqJyHAqn3Fwnsic">
+                                <img src="./src/Vibra Tropical.png" alt="">
+                            </a>
+                        </div>
+                        <div class="options">
+                            <a href="https://open.spotify.com/playlist/53e1gW5hfUc4kiFKijRr96">
+                                <img src="./src/Exitos Católicos.png" alt="">
+                            </a>
+                        </div>
+                </div>
+    
+                <div class="bg-animation">
+                    <div id='stars'></div>
+                    <div id='stars2'></div>
+                    <div id='stars3'></div>
+                    <div id='stars4'></div>
+                </div>
+    
+                <img src="./src/ONE_rpm_studios.png" alt="logo" id="logo">
+                <div class="overlay2"></div>
+            </div>
+            <div class="deadzone"></div>
+        </div>
+
+    </body>
 </html>
